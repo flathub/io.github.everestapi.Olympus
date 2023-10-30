@@ -1,27 +1,10 @@
-# Flathub
+# Olympus - Celeste Mod Manager
 
-Flathub is the central place for building and hosting Flatpak builds.
+## Notes
 
-Using the Flathub repository
-----------------------------
+This flatpak requires `talk-name=org.freedesktop.Flatpak` in order to launch Celeste outside of the flatpak sandbox. You can remove this permission to improve the sandboxing however you won't be able to launch celeste directly from Olympus.
 
-To install applications that are hosted on Flathub, use the following:
-```
-flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.gnome.Recipes
-```
+## Known issues
 
-To install applications from the beta branch, use the following:
-```
-flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
-flatpak install flathub-beta org.godotengine.Godot
-```
-
-For more information and more applications see https://flathub.org
-
-Contributing to Flathub
------------------------
-
-For information on creating packages or reporting issues please see the [contributing page](/CONTRIBUTING.md).
-
-***Note:*** *this repository is not for reporting issues related to the flathub.org website itself or contributing to its development. For that, go to https://github.com/flathub/website*
+- The `extra-data` download in Olympus settings doesn't work
+- The builtin updater doesn't take into account that it's inside a flatpak
