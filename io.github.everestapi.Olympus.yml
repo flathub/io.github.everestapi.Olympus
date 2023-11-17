@@ -22,11 +22,12 @@ finish-args:
   - --filesystem=/run/media/
 
 cleanup-commands:
-  - rm /app/opt/olympus/love /app/opt/olympus/sharp/Olympus.Sharp.bin.osx /app/opt/olympus/olympus.png /app/opt/olympus/olympus.desktop /app/opt/olympus/install.sh /app/opt/olympus/io.github.everestapi.Olympus.metainfo.xml
+  - rm /app/opt/olympus/love /app/opt/olympus/sharp/Olympus.Sharp.bin.osx /app/opt/olympus/olympus.png
+    /app/opt/olympus/olympus.desktop /app/opt/olympus/install.sh /app/opt/olympus/io.github.everestapi.Olympus.metainfo.xml
 
 modules:
   - shared-modules/luajit/luajit.json
-  
+
   - name: libmodplug
     sources:
       - type: archive
@@ -37,7 +38,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/love2d/love/releases/download/11.4/love-11.4-linux-src.tar.gz
-        sha256: e32feecaf5f4f210242a4b5f26cdf9ce9014bfde18d51286f643bb7fe51f5369 
+        sha256: e32feecaf5f4f210242a4b5f26cdf9ce9014bfde18d51286f643bb7fe51f5369
 
   - name: Olympus
     buildsystem: simple
@@ -47,15 +48,18 @@ modules:
       - ln -s /app/opt/olympus/olympus /app/bin/olympus
       - install -Dm644 /app/opt/olympus/olympus.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
       - install -Dm644 /app/opt/olympus/olympus.desktop /app/share/applications/${FLATPAK_ID}.desktop
-      - desktop-file-edit --set-key=Icon --set-value='io.github.everestapi.Olympus' /app/share/applications/${FLATPAK_ID}.desktop
-      - install -Dm644 /app/opt/olympus/io.github.everestapi.Olympus.metainfo.xml /app/share/metainfo/io.github.everestapi.Olympus.metainfo.xml
+      - desktop-file-edit --set-key=Icon --set-value='io.github.everestapi.Olympus'
+        /app/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm644 /app/opt/olympus/io.github.everestapi.Olympus.metainfo.xml
+        /app/share/metainfo/io.github.everestapi.Olympus.metainfo.xml
     sources:
       - type: archive
-        url: https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/3630/artifacts?artifactName=linux.main&$format=zip
-        sha256: b7745249113ae909e60a4bdda1fc6003904eaa19fe41fb6003b3065a854bbd49
+        url: https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/3728/artifacts?artifactName=linux.main&%24format=zip
+        sha256: 372e2738248d1c61cc3d06f73850448214cd958107562edbe1620ee37cf0b8b4
         dest-filename: build.zip
         x-checker-data:
           type: json
           url: https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds?branchName=refs%2Fheads%2Fstable&$top=1&api-version=7.0
           version-query: .value[0].id
-          url-query: '["https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/" + $version + "/artifacts?artifactName=linux.main&$format=zip"][0]'
+          url-query: '["https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/"
+            + $version + "/artifacts?artifactName=linux.main&$format=zip"][0]'
