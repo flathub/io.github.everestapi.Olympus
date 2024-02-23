@@ -5,7 +5,8 @@ sdk: org.freedesktop.Sdk
 command: olympus
 finish-args:
   # Allow the GUI to render
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --share=ipc
   # Needed to access mod list and download mods
   - --share=network
