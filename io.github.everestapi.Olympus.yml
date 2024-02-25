@@ -27,7 +27,7 @@ cleanup-commands:
 
 modules:
   - shared-modules/luajit/luajit.json
-  
+
   - name: libmodplug
     sources:
       - type: archive
@@ -38,7 +38,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/love2d/love/releases/download/11.5/love-11.5-linux-src.tar.gz
-        sha256: 066e0843f71aa9fd28b8eaf27d41abb74bfaef7556153ac2e3cf08eafc874c39 
+        sha256: 066e0843f71aa9fd28b8eaf27d41abb74bfaef7556153ac2e3cf08eafc874c39
 
   - name: Olympus
     buildsystem: simple
@@ -52,8 +52,8 @@ modules:
       - install -Dm644 /app/opt/olympus/io.github.everestapi.Olympus.metainfo.xml /app/share/metainfo/io.github.everestapi.Olympus.metainfo.xml
     sources:
       - type: archive
-        url: https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/3813/artifacts?artifactName=linux.main&$format=zip
-        sha256: f1b64933fd9f22d266edd27b08b7000e43a11e4839d6bc07382da09fbef48442
+        url: https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/3958/artifacts?artifactName=linux.main&%24format=zip
+        sha256: e8b0b14374d271bb726a6f8ecb6bacd28c541135ed648b1fbbd22eae53c4b21c
         dest-filename: build.zip
         x-checker-data:
           type: json
