@@ -53,7 +53,7 @@ modules:
     sources:
       - type: archive
         url: https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/4007/artifacts?artifactName=linux.main&%24format=zip
-        sha256: 3d131a30497a6d486fb01a22cb4b24ca7b5fc90ed989d8053801fc8f7b3eb2fd
+        sha256: 3c35cc9437e2fedfe72aeca2018c77b0a6035a701c0d0262a940a9051bebd33f
         dest-filename: build.zip
         x-checker-data:
           type: json
