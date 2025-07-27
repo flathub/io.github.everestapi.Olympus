@@ -52,8 +52,8 @@ modules:
       - install -Dm644 /app/opt/olympus/io.github.everestapi.Olympus.metainfo.xml /app/share/metainfo/io.github.everestapi.Olympus.metainfo.xml
     sources:
       - type: archive
-        url: https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/4923/artifacts?artifactName=linux.main&%24format=zip
-        sha256: fad013ad88b30c2b07d0ce009238fdfcbd6673cb02f4b9de40a20a8f03b0c980
+        url: https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/4978/artifacts?artifactName=linux.main&%24format=zip
+        sha256: 171c0b017770b1fcc3c6fa6dcfc71bb9359d509afd80fb5cde23437672a541f5
         dest-filename: build.zip
         x-checker-data:
           type: json
