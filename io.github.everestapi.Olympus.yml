@@ -1,6 +1,6 @@
 app-id: io.github.everestapi.Olympus
 runtime: org.freedesktop.Platform
-runtime-version: "25.08"
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: olympus
 finish-args:
@@ -52,8 +52,8 @@ modules:
       - install -Dm644 /app/opt/olympus/io.github.everestapi.Olympus.metainfo.xml /app/share/metainfo/io.github.everestapi.Olympus.metainfo.xml
     sources:
       - type: archive
-        url: https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/5596/artifacts?artifactName=linux.main&%24format=zip
-        sha256: 43362b5a1dd8438efb2a489b46f2eb70a00076164532269b74f1c71b821d66fb
+        url: https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/5618/artifacts?artifactName=linux.main&%24format=zip
+        sha256: 0474096b6e770cf96d00ad86eab138fe88474dca913ee30aa7dfb6d4f55139d5
         dest-filename: build.zip
         x-checker-data:
           type: json
